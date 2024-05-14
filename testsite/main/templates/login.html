@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: gainsboro;
+            color: green;
+        }
+        .form-content {
+            margin-top: 10%;
+            text-align: center;
+            
+        }
+        .form-content input {
+            width: 20%;
+            height: 20px;
+        }
+        
+        .form-content button {
+            width: 15%;
+            height: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="form-content">
+    <form action="" method="post">
+        {% csrf_token %}
+        <p><input type="text" name="username" placeholder="Name"></p>
+        <p><input type="password" name="password" placeholder="Password"></p>
+        <p><button type="submit">Login</button></p>
+        <p><a href="/reg/">reg</a></p>
+    </form>
+    </div>
+</body>
+</html>

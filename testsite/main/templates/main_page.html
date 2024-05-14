@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: gainsboro;
+            color: green;
+        }
+        .content-box {
+            
+            margin: auto;
+            margin-top: 40px;
+            border-top: 2px solid green;
+            height: 100px;
+            width: 95%;
+        }
+        .links-list {
+            font-size: 140%;
+        }
+        .links-list a {
+            text-decoration: underline solid gainsboro;
+            color: green;
+            transition: 500ms all ease-in-out;
+        }
+
+        .links-list a:hover {
+            text-decoration: underline solid green;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <h1>{{user}}</h1>
+    <div class="content-box">
+        <ul class="links-list">
+            {% for link in all_links %}
+                <li><a href="">{{link}}</a></li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</body>
+</html>
